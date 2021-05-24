@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxHeight="?android:actionBarSize">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/titleInputDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="I want to"
+            android:lines="1"
+            android:textColor="#3D5AFE"
+            android:textColorHint="@color/colorAccent" />
+    </android.support.design.widget.TextInputLayout>
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_margin="4dp"
+        android:alwaysDrawnWithCache="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout"/>
+
+    <Button
+        android:id="@+id/btnCancelDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/saveWithoutTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePicker1" />
+
+    <Button
+        android:id="@+id/saveWithoutTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/btnOkDatePicker"
+        app:layout_constraintStart_toEndOf="@id/btnCancelDatePicker"
+        app:layout_constraintTop_toBottomOf="@id/datePicker1" />
+
+    <Button
+        android:id="@+id/btnOkDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#B8F8CA"
+        android:text="Select Time"
+        android:textAllCaps="false"
+        android:textColor="#290202"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/saveWithoutTime"
+        app:layout_constraintTop_toBottomOf="@id/datePicker1" />
+
+</android.support.constraint.ConstraintLayout>

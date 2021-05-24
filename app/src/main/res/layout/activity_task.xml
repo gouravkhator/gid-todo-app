@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/taskPageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewLine"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/toolbarTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:text="My Todo"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FF0505"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutUsToolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleEditText"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Title"
+        android:textColor="#100B4D"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/titleEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine" />
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:inputType="textFilter"
+        android:lines="1"
+        android:maxLength="80"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/viewLine" />
+
+    <EditText
+        android:id="@+id/contentsEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Give some description"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <TextView
+        android:id="@+id/tvDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Due Date"
+        android:textColor="#100B4D"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/titleEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentsEditText"  />
+
+    <EditText
+        android:id="@+id/dueDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Double click to select Due Date"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@id/deleteDateBtn"
+        app:layout_constraintRight_toLeftOf="@id/deleteDateBtn"
+        app:layout_constraintStart_toEndOf="@id/tvDueDate"
+        app:layout_constraintTop_toBottomOf="@id/contentsEditText"
+        android:editable="false"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/deleteDateBtn"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dueDateEditText"
+        app:layout_constraintStart_toEndOf="@id/dueDateEditText"
+        app:layout_constraintTop_toBottomOf="@id/contentsEditText"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvDueTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Due Time"
+        android:textColor="#100B4D"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/titleEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dueDateEditText"  />
+
+    <EditText
+        android:id="@+id/dueTimeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Double click to select Due Time"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/deleteTimeBtn"
+        app:layout_constraintRight_toLeftOf="@id/deleteTimeBtn"
+        app:layout_constraintStart_toEndOf="@id/tvDueTime"
+        app:layout_constraintTop_toBottomOf="@id/dueDateEditText"
+        android:editable="false"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/deleteTimeBtn"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dueTimeEditText"
+        app:layout_constraintStart_toEndOf="@id/dueTimeEditText"
+        app:layout_constraintTop_toBottomOf="@id/dueDateEditText"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:text="Done"
+        android:textColor="#100B4D"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dueTimeEditText" />
+
+    <CheckBox
+        android:id="@+id/checkboxTaskPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkedTextView"
+        app:layout_constraintTop_toBottomOf="@id/dueTimeEditText"/>
+
+    <Button
+        android:id="@+id/btnSaveInTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkedTextView"
+        app:layout_constraintTop_toBottomOf="@id/dueTimeEditText"/>
+
+</android.support.constraint.ConstraintLayout>

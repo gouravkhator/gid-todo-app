@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="@color/lightYellow"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/darkYellow"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/note_title"
+            android:textSize="23sp"
+            android:layout_weight="70"
+            android:text="Some Note Title"
+            android:textColor="#000"
+            android:lines="1"
+            android:padding="10dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/darkYellow"/>
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxTodo"
+            android:layout_weight="8"
+            android:padding="10dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/note_short_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightYellow"
+        android:text="Due Date : "
+        android:paddingLeft="10dp"
+        android:textColor="#1D6BF1"
+        android:textSize="17sp" />
+</LinearLayout>

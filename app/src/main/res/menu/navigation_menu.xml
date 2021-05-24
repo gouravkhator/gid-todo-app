@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/todoItem"
+        android:title="To Do"
+        android:icon="@drawable/ic_format_list_bulleted_24dp"/>
+
+    <item
+        android:id="@+id/doneItem"
+        android:title="Done"
+        android:icon="@drawable/ic_done_all_24dp"/>
+
+    <item
+        android:id="@+id/allItem"
+        android:title="All"
+        android:icon="@drawable/ic_all_inclusive_24dp"/>
+</menu>
